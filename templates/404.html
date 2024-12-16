@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+    Page Not Found
+{% endblock %}
+
+{% block content %}
+    <div class="vh-100 d-flex align-items-center justify-content-center">
+        <div class="text-center">
+            <h1 class="text-black-50" style="font-size: 300px">404</h1>
+            <p>Page Not Found</p>
+            <a href="{% url 'home' %}" class="btn btn-dark rounded-0">Go Home</a>
+        </div>
+    </div>
+{% endblock %}
+

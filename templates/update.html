@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+    {% include 'navbar.html' %}
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-5">
+                {% include 'alert.html' %}
+                <form action="{{ request.path }}" method="post" class="shadow px-3 py-4" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <button class="btn btn-danger w-100">Update Student</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block title %}
+	Update Student
+{% endblock %}
+
